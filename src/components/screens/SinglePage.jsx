@@ -13,7 +13,7 @@ function SinglePage({match}) {
     useEffect(() => {
         console.log(match.params); 
         axios
-            .get(`https://traveller.talrop.works/api/v1/places/view/${match.params.id}`)
+            .get(`https://traveller.talrop.works/api/v1/places/view/${match.params.id}/`)
             .then(function (response) {
             // handle success  
                 setSinglePlace(response.data.data);

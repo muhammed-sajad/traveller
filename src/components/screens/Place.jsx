@@ -12,20 +12,17 @@ function Place() {
         axios
             .get(`https://traveller.talrop.works/api/v1/places/`)
             .then(function (response) {
-                // handle success
                 setLocation(response.data.data);
             })
             .catch(function (error) {
-                // handle error
             })
             .then(function () {
-                // always executed
             });
     },[]);
 
     let renderPlace = () => {
         return location.map((place) => (
-            <Link to={`/place/${place.id}`}>
+            <Link to={`/place/${place.id}/`}>
                 <Li key={place.id}>
                     <PlaceImage src={place.image} alt={place.name}/>
                     <Box>
@@ -48,11 +45,11 @@ function Place() {
             <Section>
                 <H1>Welcome</H1>
                 <Paragraph>Explore the world around you</Paragraph>
-                <Div>
+                <div>
                     <Ul>
                         {renderPlace()}
                     </Ul>
-                </Div>
+                </div>
             </Section>
         </>
     )
@@ -70,7 +67,6 @@ const Paragraph = styles.p`
     color: #cfcfcf;
     margin: 30px 0;
 `;
-const Div = styles.div``;
 const H3 = styles.h3`
 `;
 const H4 = styles.h4`
@@ -84,11 +80,6 @@ const PlaceImage = styles.img`
 const Box = styles.div`
     padding: 10px 20px;
 `;
-// const Pass = styles(Link)`
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr 1fr;
-//     // grid-gap: 10px;
-// `;
 const Ul = styles.ul`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
