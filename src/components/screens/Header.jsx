@@ -6,7 +6,7 @@ function Header() {
     return (
         <div>
                 <Ul>
-                    <Link to='/'>
+                    <Link to='/traveller'>
                         <Li>
                             <Logo src={require('../../assets/images/logo.svg').default} alt="logo" />
                         </Li>

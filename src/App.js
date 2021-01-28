@@ -11,7 +11,7 @@ function App() {
             <Router>
             <Header />
             <Switch>
-                    <Route exact path="/" component={Place} />
+                    <Route exact path="/traveller" component={Place} />
                     <Route path="/place/:id" component={SinglePage} />
                 </Switch>
             </Router>
