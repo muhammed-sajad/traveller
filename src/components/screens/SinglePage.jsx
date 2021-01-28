@@ -47,7 +47,6 @@ function SinglePage({match}) {
                 </RightSpan>
             </SmallDiv>
             <ImageDiv>
-                
                 <Ul>
                 <ImageOne src={singlePlace.image} alt="Image"/>
                     {renderGallery()}
@@ -100,12 +99,10 @@ const ImageOne = styles.img`
     width: 100%;
     height: 100%;
     grid-row: 1 / 3;
-    // border-radius: 5px;
 `;
 const ImageTwo = styles.img`
     width: 100%;
     height: 100%;
-    // border-radius: 5px;
 `;
 const Ul = styles.ul`
     display: grid;
