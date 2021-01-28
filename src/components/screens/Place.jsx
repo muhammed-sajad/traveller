@@ -90,7 +90,7 @@ const Ul = styles.ul`
     @media all and (max-width: 640px) {
         grid-template-columns: 1fr 1fr;
     }
-    @media all and (max-width: 360px) {
+    @media all and (max-width: 460px) {
         grid-template-columns: 1fr;
     }
 `;
